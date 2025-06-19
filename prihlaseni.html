@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SŠITAS - Přihlášení</title>
+    <link rel="stylesheet" href="styl_prihlaseni.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="logo.jpg" alt="Logo SŠITAS" class="logo">
+        </header>
+
+        <main>
+            <div id="server-selection">
+                <h2>Vyberte cílový server</h2>
+                <div class="server-selection">
+                    <div class="server-option disabled">
+                        <label>
+                            <input type="radio" name="server" disabled>
+                            <span>VŠITAS - Olomouc 17. listopadu</span>
+                            <span class="disabled-text">nelze spojit</span>
+                        </label>
+                    </div>
+                    <div class="server-option">
+                        <label for="server-sitas">
+                            <input type="radio" name="server" id="server-sitas">
+                            <span>SŠITAS - Olomouc 17. listopadu</span>
+                        </label>
+                    </div>
+                    <div class="server-option disabled">
+                        <label>
+                            <input type="radio" name="server" disabled>
+                            <span>ITAS-Sekundarschule - Berlin</span>
+                             <span class="disabled-text">nelze spojit</span>
+                        </label>
+                    </div>
+                    <div class="server-option disabled">
+                        <label>
+                            <input type="radio" name="server" disabled>
+                            <span>stredná škola ITAS v Bratislave</span>
+                             <span class="disabled-text">nelze spojit</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login-section">
+                <h2>Přihlášení</h2>
+                <form id="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="username">Přihlašovací jméno:</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Heslo:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <button type="submit">Přihlásit se</button>
+                </form>
+            </div>
+
+            <div id="error-message"></div>
+        </main>
+    </div>
+
+    <script src="skript_prihlaseni.js"></script>
+</body>
+</html>

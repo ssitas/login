@@ -1,0 +1,158 @@
+/* styl_prihlaseni.css */
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #007bff;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --border-color: #ddd;
+    --disabled-color: #aaa;
+    --error-color: #dc3545;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--container-bg);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header img.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* --- Výběr serveru --- */
+.server-selection {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.server-option {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.server-option label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.server-option input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.server-option:not(.disabled):hover {
+    border-color: var(--secondary-color);
+    background-color: #e9ecef;
+}
+
+.server-option.disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: var(--disabled-color);
+}
+
+.server-option.disabled label {
+    cursor: not-allowed;
+}
+
+.disabled-text {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: auto;
+    padding-left: 10px;
+}
+
+/* --- Přihlašovací formulář --- */
+#login-section {
+    display: none; /* Skryto defaultně */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Chybová hláška --- */
+#error-message {
+    display: none; /* Skryto defaultně */
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--error-color);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
